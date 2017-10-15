@@ -5,4 +5,5 @@ package com.example.wesniemarcelin.pinterestcodingchallenge.model;
  */
 
 public class Constants {
+    public final static String PINS_ACTIVITY ="com.example.wesniemarcelin.pinterestcodingchallenge";
 }

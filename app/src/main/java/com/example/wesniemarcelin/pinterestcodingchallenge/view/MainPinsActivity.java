@@ -3,6 +3,7 @@ package com.example.wesniemarcelin.pinterestcodingchallenge.view;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.example.wesniemarcelin.pinterestcodingchallenge.R;
@@ -14,8 +15,12 @@ import org.json.JSONObject;
 import java.io.InputStream;
 import java.util.Scanner;
 
+import butterknife.BindView;
+
 public class MainPinsActivity extends AppCompatActivity {
     public static final String FILE_NAME = "pins_formatted.json";
+    @BindView(R.id.pins_rv)
+    RecyclerView pinsRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

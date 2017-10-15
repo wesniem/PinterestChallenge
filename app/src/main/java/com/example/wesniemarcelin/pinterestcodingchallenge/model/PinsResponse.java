@@ -7,15 +7,53 @@ import java.util.List;
  */
 
 public class PinsResponse {
+    private List<Object> access = null;
+    private List<Object> additionalHideReasons = null;
+    private Object attribution;
+    private Board board;
+    private Object buyableProduct;
+    private int commentCount;
+    private Comments comments;
+    private String createdAt;
+    private String description;
+    private String descriptionHtml;
+    private String domain;
+    private String dominantColor;
+    private Object embed;
+    private String id;
+    private String imageSignature;
+//    private Images images;
+    private boolean isDownstreamPromotion;
+    private boolean isPlayable;
+    private boolean isRepin;
+    private boolean isUploaded;
+    private boolean isVideo;
+    private int likeCount;
+    private boolean likedByMe;
+    private String link;
+    private String method;
+    private PinJoin pinJoin;
+    private Pinner pinner;
+    private Object placeSummary;
+    private String priceCurrency;
+    private float priceValue;
+    private String privacy;
+    private Object promoter;
+    private int repinCount;
+    private Object richSummary;
+    private Object sourceInterest;
+    private String title;
+    private String type;
+    private List<Object> viewTags = null;
 
 
 
     public class Board {
 
-        private Boolean followedByMe;
+        private boolean followedByMe;
         private String id;
         private String imageThumbnailUrl;
-        private Boolean isCollaborative;
+        private boolean isCollaborative;
         private String layout;
         private String name;
         private Owner owner;
@@ -23,11 +61,11 @@ public class PinsResponse {
         private String type;
         private String url;
 
-        public Boolean getFollowedByMe() {
+        public boolean isFollowedByMe() {
             return followedByMe;
         }
 
-        public void setFollowedByMe(Boolean followedByMe) {
+        public void setFollowedByMe(boolean followedByMe) {
             this.followedByMe = followedByMe;
         }
 
@@ -47,11 +85,11 @@ public class PinsResponse {
             this.imageThumbnailUrl = imageThumbnailUrl;
         }
 
-        public Boolean getIsCollaborative() {
+        public boolean isIsCollaborative() {
             return isCollaborative;
         }
 
-        public void setIsCollaborative(Boolean isCollaborative) {
+        public void setIsCollaborative(boolean isCollaborative) {
             this.isCollaborative = isCollaborative;
         }
 
@@ -105,6 +143,8 @@ public class PinsResponse {
 
     }
 
+
+
     public class CanonicalPin {
 
         private String id;
@@ -154,10 +194,10 @@ public class PinsResponse {
 
 //    public class Images {
 //
-////        private com.example.wesniemarcelin.pinterestcodingchallenge._136x136 _136x136;
-////        private com.example.wesniemarcelin.pinterestcodingchallenge._236x _236x;
-////        private com.example.wesniemarcelin.pinterestcodingchallenge._474x _474x;
-////        private com.example.wesniemarcelin.pinterestcodingchallenge._736x _736x;
+//        private com.example.wesniemarcelin.pinterestcodingchallenge._136x136 _136x136;
+//        private com.example.wesniemarcelin.pinterestcodingchallenge._236x _236x;
+//        private com.example.wesniemarcelin.pinterestcodingchallenge._474x _474x;
+//        private com.example.wesniemarcelin.pinterestcodingchallenge._736x _736x;
 //        private Orig orig;
 //
 //        public com.example.wesniemarcelin.pinterestcodingchallenge._136x136 get136x136() {
@@ -202,17 +242,18 @@ public class PinsResponse {
 //
 //    }
 
+
     public class Orig {
 
-        private Integer height;
+        private int height;
         private String url;
-        private Integer width;
+        private int width;
 
-        public Integer getHeight() {
+        public int getHeight() {
             return height;
         }
 
-        public void setHeight(Integer height) {
+        public void setHeight(int height) {
             this.height = height;
         }
 
@@ -224,11 +265,11 @@ public class PinsResponse {
             this.url = url;
         }
 
-        public Integer getWidth() {
+        public int getWidth() {
             return width;
         }
 
-        public void setWidth(Integer width) {
+        public void setWidth(int width) {
             this.width = width;
         }
 
@@ -248,353 +289,6 @@ public class PinsResponse {
 
     }
 
-
-    public class Pin {
-
-        private List<Object> access = null;
-        private List<Object> additionalHideReasons = null;
-        private Object attribution;
-        private Board board;
-        private Object buyableProduct;
-        private Integer commentCount;
-        private Comments comments;
-        private String createdAt;
-        private String description;
-        private String descriptionHtml;
-        private String domain;
-        private String dominantColor;
-        private Object embed;
-        private String id;
-        private String imageSignature;
-//        private Images images;
-        private Boolean isDownstreamPromotion;
-        private Boolean isPlayable;
-        private Boolean isRepin;
-        private Boolean isUploaded;
-        private Boolean isVideo;
-        private Integer likeCount;
-        private Boolean likedByMe;
-        private String link;
-        private String method;
-        private PinJoin pinJoin;
-        private Pinner pinner;
-        private Object placeSummary;
-        private String priceCurrency;
-        private Float priceValue;
-        private String privacy;
-        private Object promoter;
-        private Integer repinCount;
-        private Object richSummary;
-        private Object sourceInterest;
-        private String title;
-        private String type;
-        private List<Object> viewTags = null;
-
-        public List<Object> getAccess() {
-            return access;
-        }
-
-        public void setAccess(List<Object> access) {
-            this.access = access;
-        }
-
-        public List<Object> getAdditionalHideReasons() {
-            return additionalHideReasons;
-        }
-
-        public void setAdditionalHideReasons(List<Object> additionalHideReasons) {
-            this.additionalHideReasons = additionalHideReasons;
-        }
-
-        public Object getAttribution() {
-            return attribution;
-        }
-
-        public void setAttribution(Object attribution) {
-            this.attribution = attribution;
-        }
-
-        public Board getBoard() {
-            return board;
-        }
-
-        public void setBoard(Board board) {
-            this.board = board;
-        }
-
-        public Object getBuyableProduct() {
-            return buyableProduct;
-        }
-
-        public void setBuyableProduct(Object buyableProduct) {
-            this.buyableProduct = buyableProduct;
-        }
-
-        public Integer getCommentCount() {
-            return commentCount;
-        }
-
-        public void setCommentCount(Integer commentCount) {
-            this.commentCount = commentCount;
-        }
-
-        public Comments getComments() {
-            return comments;
-        }
-
-        public void setComments(Comments comments) {
-            this.comments = comments;
-        }
-
-        public String getCreatedAt() {
-            return createdAt;
-        }
-
-        public void setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-        }
-
-        public String getDescription() {
-            return description;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
-
-        public String getDescriptionHtml() {
-            return descriptionHtml;
-        }
-
-        public void setDescriptionHtml(String descriptionHtml) {
-            this.descriptionHtml = descriptionHtml;
-        }
-
-        public String getDomain() {
-            return domain;
-        }
-
-        public void setDomain(String domain) {
-            this.domain = domain;
-        }
-
-        public String getDominantColor() {
-            return dominantColor;
-        }
-
-        public void setDominantColor(String dominantColor) {
-            this.dominantColor = dominantColor;
-        }
-
-        public Object getEmbed() {
-            return embed;
-        }
-
-        public void setEmbed(Object embed) {
-            this.embed = embed;
-        }
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
-
-        public String getImageSignature() {
-            return imageSignature;
-        }
-
-        public void setImageSignature(String imageSignature) {
-            this.imageSignature = imageSignature;
-        }
-
-//        public Images getImages() {
-//            return images;
-//        }
-//
-//        public void setImages(Images images) {
-//            this.images = images;
-//        }
-
-        public Boolean getIsDownstreamPromotion() {
-            return isDownstreamPromotion;
-        }
-
-        public void setIsDownstreamPromotion(Boolean isDownstreamPromotion) {
-            this.isDownstreamPromotion = isDownstreamPromotion;
-        }
-
-        public Boolean getIsPlayable() {
-            return isPlayable;
-        }
-
-        public void setIsPlayable(Boolean isPlayable) {
-            this.isPlayable = isPlayable;
-        }
-
-        public Boolean getIsRepin() {
-            return isRepin;
-        }
-
-        public void setIsRepin(Boolean isRepin) {
-            this.isRepin = isRepin;
-        }
-
-        public Boolean getIsUploaded() {
-            return isUploaded;
-        }
-
-        public void setIsUploaded(Boolean isUploaded) {
-            this.isUploaded = isUploaded;
-        }
-
-        public Boolean getIsVideo() {
-            return isVideo;
-        }
-
-        public void setIsVideo(Boolean isVideo) {
-            this.isVideo = isVideo;
-        }
-
-        public Integer getLikeCount() {
-            return likeCount;
-        }
-
-        public void setLikeCount(Integer likeCount) {
-            this.likeCount = likeCount;
-        }
-
-        public Boolean getLikedByMe() {
-            return likedByMe;
-        }
-
-        public void setLikedByMe(Boolean likedByMe) {
-            this.likedByMe = likedByMe;
-        }
-
-        public String getLink() {
-            return link;
-        }
-
-        public void setLink(String link) {
-            this.link = link;
-        }
-
-        public String getMethod() {
-            return method;
-        }
-
-        public void setMethod(String method) {
-            this.method = method;
-        }
-
-        public PinJoin getPinJoin() {
-            return pinJoin;
-        }
-
-        public void setPinJoin(PinJoin pinJoin) {
-            this.pinJoin = pinJoin;
-        }
-
-        public Pinner getPinner() {
-            return pinner;
-        }
-
-        public void setPinner(Pinner pinner) {
-            this.pinner = pinner;
-        }
-
-        public Object getPlaceSummary() {
-            return placeSummary;
-        }
-
-        public void setPlaceSummary(Object placeSummary) {
-            this.placeSummary = placeSummary;
-        }
-
-        public String getPriceCurrency() {
-            return priceCurrency;
-        }
-
-        public void setPriceCurrency(String priceCurrency) {
-            this.priceCurrency = priceCurrency;
-        }
-
-        public Float getPriceValue() {
-            return priceValue;
-        }
-
-        public void setPriceValue(Float priceValue) {
-            this.priceValue = priceValue;
-        }
-
-        public String getPrivacy() {
-            return privacy;
-        }
-
-        public void setPrivacy(String privacy) {
-            this.privacy = privacy;
-        }
-
-        public Object getPromoter() {
-            return promoter;
-        }
-
-        public void setPromoter(Object promoter) {
-            this.promoter = promoter;
-        }
-
-        public Integer getRepinCount() {
-            return repinCount;
-        }
-
-        public void setRepinCount(Integer repinCount) {
-            this.repinCount = repinCount;
-        }
-
-        public Object getRichSummary() {
-            return richSummary;
-        }
-
-        public void setRichSummary(Object richSummary) {
-            this.richSummary = richSummary;
-        }
-
-        public Object getSourceInterest() {
-            return sourceInterest;
-        }
-
-        public void setSourceInterest(Object sourceInterest) {
-            this.sourceInterest = sourceInterest;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getType() {
-            return type;
-        }
-
-        public void setType(String type) {
-            this.type = type;
-        }
-
-        public List<Object> getViewTags() {
-            return viewTags;
-        }
-
-        public void setViewTags(List<Object> viewTags) {
-            this.viewTags = viewTags;
-        }
-
-    }
 
     public class PinJoin {
 
@@ -637,10 +331,9 @@ public class PinsResponse {
 
     }
 
-
     public class Pinner {
 
-        private Boolean explicitlyFollowedByMe;
+        private boolean explicitlyFollowedByMe;
         private String fullName;
         private String id;
         private String imageLargeUrl;
@@ -648,11 +341,11 @@ public class PinsResponse {
         private String type;
         private String username;
 
-        public Boolean getExplicitlyFollowedByMe() {
+        public boolean isExplicitlyFollowedByMe() {
             return explicitlyFollowedByMe;
         }
 
-        public void setExplicitlyFollowedByMe(Boolean explicitlyFollowedByMe) {
+        public void setExplicitlyFollowedByMe(boolean explicitlyFollowedByMe) {
             this.explicitlyFollowedByMe = explicitlyFollowedByMe;
         }
 
@@ -708,15 +401,15 @@ public class PinsResponse {
 
     public class _136x136 {
 
-        private Integer height;
+        private int height;
         private String url;
-        private Integer width;
+        private int width;
 
-        public Integer getHeight() {
+        public int getHeight() {
             return height;
         }
 
-        public void setHeight(Integer height) {
+        public void setHeight(int height) {
             this.height = height;
         }
 
@@ -728,11 +421,11 @@ public class PinsResponse {
             this.url = url;
         }
 
-        public Integer getWidth() {
+        public int getWidth() {
             return width;
         }
 
-        public void setWidth(Integer width) {
+        public void setWidth(int width) {
             this.width = width;
         }
 
@@ -740,15 +433,15 @@ public class PinsResponse {
 
     public class _236x {
 
-        private Integer height;
+        private int height;
         private String url;
-        private Integer width;
+        private int width;
 
-        public Integer getHeight() {
+        public int getHeight() {
             return height;
         }
 
-        public void setHeight(Integer height) {
+        public void setHeight(int height) {
             this.height = height;
         }
 
@@ -760,12 +453,8 @@ public class PinsResponse {
             this.url = url;
         }
 
-        public Integer getWidth() {
+        public int getWidth() {
             return width;
-        }
-
-        public void setWidth(Integer width) {
-            this.width = width;
         }
 
     }
@@ -773,32 +462,20 @@ public class PinsResponse {
 
     public class _474x {
 
-        private Integer height;
+        private int height;
         private String url;
-        private Integer width;
+        private int width;
 
-        public Integer getHeight() {
+        public int getHeight() {
             return height;
-        }
-
-        public void setHeight(Integer height) {
-            this.height = height;
         }
 
         public String getUrl() {
             return url;
         }
 
-        public void setUrl(String url) {
-            this.url = url;
-        }
-
-        public Integer getWidth() {
+        public int getWidth() {
             return width;
-        }
-
-        public void setWidth(Integer width) {
-            this.width = width;
         }
 
     }
@@ -806,15 +483,15 @@ public class PinsResponse {
 
     public class _736x {
 
-        private Integer height;
+        private int height;
         private String url;
-        private Integer width;
+        private int width;
 
-        public Integer getHeight() {
+        public int getHeight() {
             return height;
         }
 
-        public void setHeight(Integer height) {
+        public void setHeight(int height) {
             this.height = height;
         }
 
@@ -826,15 +503,166 @@ public class PinsResponse {
             this.url = url;
         }
 
-        public Integer getWidth() {
+        public int getWidth() {
             return width;
         }
 
-        public void setWidth(Integer width) {
+        public void setWidth(int width) {
             this.width = width;
         }
 
     }
 
 
+    public List<Object> getAccess() {
+        return access;
+    }
+
+    public List<Object> getAdditionalHideReasons() {
+        return additionalHideReasons;
+    }
+
+    public Object getAttribution() {
+        return attribution;
+    }
+
+    public Board getBoard() {
+        return board;
+    }
+
+    public Object getBuyableProduct() {
+        return buyableProduct;
+    }
+
+    public int getCommentCount() {
+        return commentCount;
+    }
+
+    public Comments getComments() {
+        return comments;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getDescriptionHtml() {
+        return descriptionHtml;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public String getDominantColor() {
+        return dominantColor;
+    }
+
+    public Object getEmbed() {
+        return embed;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getImageSignature() {
+        return imageSignature;
+    }
+
+//    public Images getImages() {
+//        return images;
+//    }
+
+    public boolean isDownstreamPromotion() {
+        return isDownstreamPromotion;
+    }
+
+    public boolean isPlayable() {
+        return isPlayable;
+    }
+
+    public boolean isRepin() {
+        return isRepin;
+    }
+
+    public boolean isUploaded() {
+        return isUploaded;
+    }
+
+    public boolean isVideo() {
+        return isVideo;
+    }
+
+    public int getLikeCount() {
+        return likeCount;
+    }
+
+    public boolean isLikedByMe() {
+        return likedByMe;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public PinJoin getPinJoin() {
+        return pinJoin;
+    }
+
+    public Pinner getPinner() {
+        return pinner;
+    }
+
+    public Object getPlaceSummary() {
+        return placeSummary;
+    }
+
+    public String getPriceCurrency() {
+        return priceCurrency;
+    }
+
+    public float getPriceValue() {
+        return priceValue;
+    }
+
+    public String getPrivacy() {
+        return privacy;
+    }
+
+    public Object getPromoter() {
+        return promoter;
+    }
+
+    public int getRepinCount() {
+        return repinCount;
+    }
+
+    public Object getRichSummary() {
+        return richSummary;
+    }
+
+    public Object getSourceInterest() {
+        return sourceInterest;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public List<Object> getViewTags() {
+        return viewTags;
+    }
 }
