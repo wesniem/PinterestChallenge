@@ -10,6 +10,46 @@ import java.util.List;
  */
 
 public class PinsResponse {
+    public PinsResponse(List<Object> access, List<Object> additionalHideReasons, Object attribution, Board board, Object buyableProduct, int commentCount, Comments comments, String createdAt, String description, String descriptionHtml, String domain, String dominantColor, Object embed, String id, String imageSignature, boolean isDownstreamPromotion, boolean isPlayable, boolean isRepin, boolean isUploaded, boolean isVideo, int likeCount, boolean likedByMe, String link, String method, PinJoin pinJoin, Pinner pinner, Object placeSummary, String priceCurrency, float priceValue, String privacy, Object promoter, int repinCount, Object richSummary, Object sourceInterest, String title, String type, List<Object> viewTags) {
+        this.access = access;
+        this.additionalHideReasons = additionalHideReasons;
+        this.attribution = attribution;
+        this.board = board;
+        this.buyableProduct = buyableProduct;
+        this.commentCount = commentCount;
+        this.comments = comments;
+        this.createdAt = createdAt;
+        this.description = description;
+        this.descriptionHtml = descriptionHtml;
+        this.domain = domain;
+        this.dominantColor = dominantColor;
+        this.embed = embed;
+        this.id = id;
+        this.imageSignature = imageSignature;
+        this.isDownstreamPromotion = isDownstreamPromotion;
+        this.isPlayable = isPlayable;
+        this.isRepin = isRepin;
+        this.isUploaded = isUploaded;
+        this.isVideo = isVideo;
+        this.likeCount = likeCount;
+        this.likedByMe = likedByMe;
+        this.link = link;
+        this.method = method;
+        this.pinJoin = pinJoin;
+        this.pinner = pinner;
+        this.placeSummary = placeSummary;
+        this.priceCurrency = priceCurrency;
+        this.priceValue = priceValue;
+        this.privacy = privacy;
+        this.promoter = promoter;
+        this.repinCount = repinCount;
+        this.richSummary = richSummary;
+        this.sourceInterest = sourceInterest;
+        this.title = title;
+        this.type = type;
+        this.viewTags = viewTags;
+    }
+
     @SerializedName("access")
     @Expose
     private List<Object> access = null;
