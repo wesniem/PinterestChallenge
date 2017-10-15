@@ -1,5 +1,8 @@
 package com.example.wesniemarcelin.pinterestcodingchallenge.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -7,58 +10,152 @@ import java.util.List;
  */
 
 public class PinsResponse {
+    @SerializedName("access")
+    @Expose
     private List<Object> access = null;
+    @SerializedName("additional_hide_reasons")
+    @Expose
     private List<Object> additionalHideReasons = null;
+    @SerializedName("attribution")
+    @Expose
     private Object attribution;
+    @SerializedName("board")
+    @Expose
     private Board board;
+    @SerializedName("buyable_product")
+    @Expose
     private Object buyableProduct;
+    @SerializedName("comment_count")
+    @Expose
     private int commentCount;
+    @SerializedName("comments")
+    @Expose
     private Comments comments;
+    @SerializedName("created_at")
+    @Expose
     private String createdAt;
+    @SerializedName("description")
+    @Expose
     private String description;
+    @SerializedName("description_html")
+    @Expose
     private String descriptionHtml;
+    @SerializedName("domain")
+    @Expose
     private String domain;
+    @SerializedName("dominant_color")
+    @Expose
     private String dominantColor;
+    @SerializedName("embed")
+    @Expose
     private Object embed;
+    @SerializedName("id")
+    @Expose
     private String id;
+    @SerializedName("image_signature")
+    @Expose
     private String imageSignature;
+    //    @SerializedName("images")
+//    @Expose
 //    private Images images;
+    @SerializedName("is_downstream_promotion")
+    @Expose
     private boolean isDownstreamPromotion;
+    @SerializedName("is_playable")
+    @Expose
     private boolean isPlayable;
+    @SerializedName("is_repin")
+    @Expose
     private boolean isRepin;
+    @SerializedName("is_uploaded")
+    @Expose
     private boolean isUploaded;
+    @SerializedName("is_video")
+    @Expose
     private boolean isVideo;
+    @SerializedName("like_count")
+    @Expose
     private int likeCount;
+    @SerializedName("liked_by_me")
+    @Expose
     private boolean likedByMe;
+    @SerializedName("link")
+    @Expose
     private String link;
+    @SerializedName("method")
+    @Expose
     private String method;
+    @SerializedName("pin_join")
+    @Expose
     private PinJoin pinJoin;
+    @SerializedName("pinner")
+    @Expose
     private Pinner pinner;
+    @SerializedName("place_summary")
+    @Expose
     private Object placeSummary;
+    @SerializedName("price_currency")
+    @Expose
     private String priceCurrency;
+    @SerializedName("price_value")
+    @Expose
     private float priceValue;
+    @SerializedName("privacy")
+    @Expose
     private String privacy;
+    @SerializedName("promoter")
+    @Expose
     private Object promoter;
+    @SerializedName("repin_count")
+    @Expose
     private int repinCount;
+    @SerializedName("rich_summary")
+    @Expose
     private Object richSummary;
+    @SerializedName("source_interest")
+    @Expose
     private Object sourceInterest;
+    @SerializedName("title")
+    @Expose
     private String title;
+    @SerializedName("type")
+    @Expose
     private String type;
+    @SerializedName("view_tags")
+    @Expose
     private List<Object> viewTags = null;
 
 
-
     public class Board {
-
+        @SerializedName("followed_by_me")
+        @Expose
         private boolean followedByMe;
+        @SerializedName("id")
+        @Expose
         private String id;
+        @SerializedName("image_thumbnail_url")
+        @Expose
         private String imageThumbnailUrl;
+        @SerializedName("is_collaborative")
+        @Expose
         private boolean isCollaborative;
+        @SerializedName("layout")
+        @Expose
         private String layout;
+        @SerializedName("name")
+        @Expose
         private String name;
+        @SerializedName("owner")
+        @Expose
         private Owner owner;
+        @SerializedName("privacy")
+        @Expose
         private String privacy;
+        @SerializedName("type")
+        @Expose
         private String type;
+        @SerializedName("url")
+        @Expose
         private String url;
 
         public boolean isFollowedByMe() {
@@ -144,9 +241,10 @@ public class PinsResponse {
     }
 
 
-
     public class CanonicalPin {
 
+        @SerializedName("id")
+        @Expose
         private String id;
 
         public String getId() {
@@ -162,8 +260,14 @@ public class PinsResponse {
 
     public class Comments {
 
+        @SerializedName("bookmark")
+        @Expose
         private Object bookmark;
+        @SerializedName("data")
+        @Expose
         private List<Object> data = null;
+        @SerializedName("uri")
+        @Expose
         private String uri;
 
         public Object getBookmark() {
@@ -194,11 +298,21 @@ public class PinsResponse {
 
 //    public class Images {
 //
-//        private com.example.wesniemarcelin.pinterestcodingchallenge._136x136 _136x136;
-//        private com.example.wesniemarcelin.pinterestcodingchallenge._236x _236x;
-//        private com.example.wesniemarcelin.pinterestcodingchallenge._474x _474x;
-//        private com.example.wesniemarcelin.pinterestcodingchallenge._736x _736x;
-//        private Orig orig;
+//        @SerializedName("136x136")
+//@Expose
+//private com.example.wesniemarcelin.pinterestcodingchallenge._136x136 _136x136;
+//    @SerializedName("236x")
+//    @Expose
+//    private com.example.wesniemarcelin.pinterestcodingchallenge._236x _236x;
+//    @SerializedName("474x")
+//    @Expose
+//    private com.example.wesniemarcelin.pinterestcodingchallenge._474x _474x;
+//    @SerializedName("736x")
+//    @Expose
+//    private com.example.wesniemarcelin.pinterestcodingchallenge._736x _736x;
+//    @SerializedName("orig")
+//    @Expose
+//    private Orig orig;
 //
 //        public com.example.wesniemarcelin.pinterestcodingchallenge._136x136 get136x136() {
 //            return _136x136;
@@ -245,8 +359,14 @@ public class PinsResponse {
 
     public class Orig {
 
+        @SerializedName("height")
+        @Expose
         private int height;
+        @SerializedName("url")
+        @Expose
         private String url;
+        @SerializedName("width")
+        @Expose
         private int width;
 
         public int getHeight() {
@@ -277,6 +397,8 @@ public class PinsResponse {
 
     public class Owner {
 
+        @SerializedName("id")
+        @Expose
         private String id;
 
         public String getId() {
@@ -292,9 +414,17 @@ public class PinsResponse {
 
     public class PinJoin {
 
+        @SerializedName("canonical_pin")
+        @Expose
         private CanonicalPin canonicalPin;
+        @SerializedName("seo_description")
+        @Expose
         private String seoDescription;
+        @SerializedName("visual_annotation")
+        @Expose
         private List<String> visualAnnotation = null;
+        @SerializedName("visual_descriptions")
+        @Expose
         private List<String> visualDescriptions = null;
 
         public CanonicalPin getCanonicalPin() {
@@ -333,12 +463,26 @@ public class PinsResponse {
 
     public class Pinner {
 
+        @SerializedName("explicitly_followed_by_me")
+        @Expose
         private boolean explicitlyFollowedByMe;
+        @SerializedName("full_name")
+        @Expose
         private String fullName;
+        @SerializedName("id")
+        @Expose
         private String id;
+        @SerializedName("image_large_url")
+        @Expose
         private String imageLargeUrl;
+        @SerializedName("image_small_url")
+        @Expose
         private String imageSmallUrl;
+        @SerializedName("type")
+        @Expose
         private String type;
+        @SerializedName("username")
+        @Expose
         private String username;
 
         public boolean isExplicitlyFollowedByMe() {
@@ -401,8 +545,14 @@ public class PinsResponse {
 
     public class _136x136 {
 
+        @SerializedName("height")
+        @Expose
         private int height;
+        @SerializedName("url")
+        @Expose
         private String url;
+        @SerializedName("width")
+        @Expose
         private int width;
 
         public int getHeight() {
@@ -433,8 +583,14 @@ public class PinsResponse {
 
     public class _236x {
 
+        @SerializedName("height")
+        @Expose
         private int height;
+        @SerializedName("url")
+        @Expose
         private String url;
+        @SerializedName("width")
+        @Expose
         private int width;
 
         public int getHeight() {
@@ -462,8 +618,14 @@ public class PinsResponse {
 
     public class _474x {
 
+        @SerializedName("height")
+        @Expose
         private int height;
+        @SerializedName("url")
+        @Expose
         private String url;
+        @SerializedName("width")
+        @Expose
         private int width;
 
         public int getHeight() {
@@ -483,8 +645,14 @@ public class PinsResponse {
 
     public class _736x {
 
+        @SerializedName("height")
+        @Expose
         private int height;
+        @SerializedName("url")
+        @Expose
         private String url;
+        @SerializedName("width")
+        @Expose
         private int width;
 
         public int getHeight() {
