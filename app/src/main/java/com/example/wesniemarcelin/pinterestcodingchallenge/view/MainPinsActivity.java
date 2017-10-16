@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
@@ -25,6 +26,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainPinsActivity extends AppCompatActivity {
     public static final String FILE_NAME = "pins_formatted.json";
@@ -38,6 +40,7 @@ public class MainPinsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_pins);
+        ButterKnife.bind(this);
         loadJSONFromRaw();
 
         GsonBuilder builder = new GsonBuilder();
@@ -49,9 +52,9 @@ public class MainPinsActivity extends AppCompatActivity {
         Type collectionType = new TypeToken<Collection<PinsResponse>>(){}.getType();
         Collection<PinsResponse> enums = mGson.fromJson(loadJSONFromRaw(), collectionType);
 //        PinsResponse converter = mGson.fromJson(loadJSONFromRaw(), PinsResponse.class);
-//        pinsRecyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext()));
+        pinsRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         adapter = new PinsAdapter((List<PinsResponse>) enums);
-//        pinsRecyclerView.setAdapter(adapter);
+        pinsRecyclerView.setAdapter(adapter);
 
 //        try {
 //            JSONdata();
