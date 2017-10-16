@@ -12,16 +12,14 @@ import android.util.Log;
 import com.example.wesniemarcelin.pinterestcodingchallenge.R;
 import com.example.wesniemarcelin.pinterestcodingchallenge.model.PinsResponse;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.InputStream;
-import java.lang.reflect.Type;
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -34,6 +32,7 @@ public class MainPinsActivity extends AppCompatActivity {
     RecyclerView pinsRecyclerView;
     PinsAdapter adapter;
     StringBuilder builder;
+    List<Object> mList;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -41,19 +40,24 @@ public class MainPinsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_pins);
         ButterKnife.bind(this);
-        loadJSONFromRaw();
+//        loadJSONFromRaw();
 
-        GsonBuilder builder = new GsonBuilder();
-        Gson mGson = builder.create();
+//        GsonBuilder builder = new GsonBuilder();
+        Gson mGson = new Gson();
+
+        PinsResponse[] response = mGson.fromJson(loadJSONFromRaw(),PinsResponse[].class);
+        Log.d("Read from response", response[0].getId());
+        ArrayList<PinsResponse> enums = new ArrayList<>(Arrays.asList(response));
+        Log.d("Read from response2", "Nothing to log");
 //        String fileData = new String(Files.readAllBytes(Paths
 //                        .get("pins_formatted.json")));
 //        Collection<PinsResponse> pins = new Collection<PinsResponse>();
-//        pins = mGson.fromJson("");
-        Type collectionType = new TypeToken<Collection<PinsResponse>>(){}.getType();
-        Collection<PinsResponse> enums = mGson.fromJson(loadJSONFromRaw(), collectionType);
+////        pins = mGson.fromJson("");
+//        Type collectionType = new TypeToken<Collection<PinsResponse>>(){}.getType();
+//        Collection<PinsResponse> enums = mGson.fromJson(loadJSONFromRaw(), collectionType);
 //        PinsResponse converter = mGson.fromJson(loadJSONFromRaw(), PinsResponse.class);
         pinsRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        adapter = new PinsAdapter((List<PinsResponse>) enums);
+        adapter = new PinsAdapter(enums);
         pinsRecyclerView.setAdapter(adapter);
 
 //        try {
@@ -83,8 +87,12 @@ public class MainPinsActivity extends AppCompatActivity {
             JSONArray root = new JSONArray(json);
             for (int i = 0; i <root.length() ; i++) {
                 JSONObject obj = root.getJSONObject(i);
-                Log.d("JSONNN", " " + obj);
+//                Log.d("JSONNN", " " + obj);
+//                mList.add(root.get(0));
             }
+            Log.d("JSONNN", " " + mList);
+
+
 //            JSONObject root = new JSONObject(json);
 //            JSONObject access = root.getJSONObject("access")
         } catch (JSONException e) {

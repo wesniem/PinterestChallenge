@@ -9,6 +9,7 @@ import com.example.wesniemarcelin.pinterestcodingchallenge.R;
 import com.example.wesniemarcelin.pinterestcodingchallenge.model.PinsResponse;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by wesniemarcelin on 10/15/17.
@@ -23,6 +24,9 @@ public class PinsViewHolder extends RecyclerView.ViewHolder {
     public PinsViewHolder(View itemView) {
         super(itemView);
         view = itemView;
+        ButterKnife.bind(view);
+        pinItemtv = (TextView) itemView.findViewById(R.id.pin_item_tv);
+
     }
 
     public void bind(PinsResponse response) {
